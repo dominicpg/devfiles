@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webserverdom
+  name: webserverdom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webserverdom
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webserverdom
+    spec:
+      containers:
+      - image: dominicpg/webserverdom
+        name: webserverdom
+        resources: {}
+status: {}
